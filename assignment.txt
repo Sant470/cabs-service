@@ -9,8 +9,3 @@ Active users -> 10M cab requests per day
 searchCabs - search cabs in 1Km radius
 updateCabLocation - cab info + current location
 bookCabs - user location, userId
-
-
-//contacts
-radha.maheshwari@whitehatjr.com
-8884410144

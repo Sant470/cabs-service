@@ -4,7 +4,8 @@ const client = redisClient.getClient();
 
 module.exports = {
 
-  // store the geospatial indexes of every vehicle in single sorted set sorted by geohash, performed in o(log(n))
+  // store the geospatial indexes of cabs grouped by country, to scale it out we need to group it according to city.
+  // and schema would follow something like '${PREFIX}:availablecabs:${countryCode}:${city}'
   updateCabLocation: async(vehicleNo, long, lat, countryCode) => {
     const cabsLocationKey = keys.getcabsLocationKey(countryCode);
     const result = await client.geoaddAsync(cabsLocationKey, long, lat, vehicleNo);
@@ -18,5 +19,5 @@ module.exports = {
     let cabsLocation = await client.geosearchAsync(cabsLocationKey, 'FROMLONLAT', long, lat, 'BYRADIUS', radius, unit, 'WITHCOORD', 'COUNT', count, 'ASC');
     return cabsLocation.map((cabLocation) => { return {vehicleNo: cabLocation[0], coordinates: cabLocation[1]}});
   }
-  
+
 }
