@@ -1,4 +1,4 @@
-# The application assumes that you are running it on redis server having version greater than 6.2, refer https://redis.io/download to download latest version.
+# The application assumes that you are running redis server having version greater than 6.2, refer https://redis.io/download to download latest version.
 
 # To test it please follow the following steps
 
