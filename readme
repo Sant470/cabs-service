@@ -1,0 +1,7 @@
+# The application assumes that you are running it on redis server having version greater than 6.2, refer https://redis.io/download to download latest version.
+
+# To test it please follow the following steps
+
+1. run script 'node scripts/populate_sample_data.js',
+2. node index.js
+3. open the api collection, and test individual APIs.

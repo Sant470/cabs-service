@@ -1,0 +1,16 @@
+Design a scalable Cab finding system based on user and cab location. Given a list of cabs with their location, and user’s current location, return a set of nearby cabs which lie within r km radius of the user.
+
+
+Total users -> 50M
+Active users -> 10M cab requests per day
+
+
+// API END POINTS
+searchCabs - search cabs in 1Km radius
+updateCabLocation - cab info + current location
+bookCabs - user location, userId
+
+
+//contacts
+radha.maheshwari@whitehatjr.com
+8884410144
